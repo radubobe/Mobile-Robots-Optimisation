@@ -1,0 +1,1 @@
+java -jar MC2v2.0beta2.jar stoch example_traces.txt general_mc2.queries -time

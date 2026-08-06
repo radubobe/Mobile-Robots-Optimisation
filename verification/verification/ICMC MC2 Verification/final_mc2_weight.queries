@@ -1,0 +1,14 @@
+P=? [ F ( [weightLeft]!=[weightRight] ) ]
+
+P =?[F(([weightLeft]<[weightRight]) ^ X([lw] >= [rw]))]
+
+P=? [ F ( ([weightLeft]=[weightRight]) ^ X([lw]!=[rw]) ) ]
+
+P=? [ F ( (([s1]+[s2]+[s3]>0) ^ ([s4]+[s5]+[s6]=0)) ^ X([weightLeft]<=[weightRight]))  ]
+
+P=? [ F ( ([wl1]>0) ^ ([wr1]<0) ^ ([s1]>0) ^ ([weightRight]=0) ^ X(X([lw]<=[rw])) ) ]
+
+
+P=? [ F ( ([weightLeft]>[weightRight]) ^ X([weightRight]>[weightLeft]) ) ]
+
+P=? [ F ( [wr1]>[wl1] ^ [s1]>0) ]

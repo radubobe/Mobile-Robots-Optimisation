@@ -1,0 +1,85 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/CircleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.6814341939410979 -0.03999903826596957 0.7307855473842128 3.232108358228418
+  position 1.0145541740786088 0.37836830197524796 4.5885496157954755
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+CircleArena {
+  radius 1.4
+}
+SolidBox {
+  translation -0.18 0.14 0.07
+  name "box(4)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation -0.45 -0.22 0.07
+  rotation 0 1 0 0
+  name "box(3)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation -0.48 0.45 0.07
+  rotation 0 1 0 0
+  name "box(8)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation -0.55 -0.64 0.07
+  rotation 0 1 0 0
+  name "box(7)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation -0.04 -0.58 0.0700003
+  rotation 1 0 0 3.14159
+  name "box(2)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation 0.59 -0.39 0.07
+  name "box(1)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation 0.13 -0.24 0.07
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation 0.29 -0.78 0.07
+  name "box(10)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation 0.26 0.33 0.07
+  name "box(5)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation 0.59 0.56 0.07
+  name "box(9)"
+  size 0.2 0.2 0.2
+}
+SolidBox {
+  translation 0.57 0.0099998 0.07
+  rotation 0 0 1 1.5708
+  name "box(6)"
+  size 0.2 0.2 0.2
+}
+E-puck {
+  translation 0.833884 -0.2231 -0.00476636
+  rotation 0.003233547410385789 -0.006400014667042638 0.9999742916612437 3.141592653589793
+  controller "nsga_controller"
+}

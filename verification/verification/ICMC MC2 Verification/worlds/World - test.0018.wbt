@@ -1,0 +1,59 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "../protos/RoadFromPoints.proto"
+
+WorldInfo {
+  FPS 15
+}
+Viewpoint {
+  orientation -0.4620793440969429 -0.39584727003642417 0.7935915943126222 4.335736347377651
+  position 0.8872209007479817 8.20697263549282 13.715854029465634
+  follow "e-puck"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  translation 0 0 -0.02
+  size 100 100
+  tileSize 1 1
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/vehicles/worlds/textures/ground_grass.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+RoadFromPoints {
+  translation 0 0 1
+  fileName "test.0018"
+  rightBorderBoundingObject FALSE
+  leftBorderBoundingObject FALSE
+}
+DEF Wall Wall {
+  translation 2.230378 0.354739 1
+  rotation 0 0 1 -0.025725
+  size 0.05 0.2 0.01
+}
+DEF E-puck E-puck {
+  translation 3.157157 3.118685 1
+  rotation 0 0 1 -1.530165
+  controller "enps_controller"
+  turretSlot [
+    GPS {
+    }
+  ]
+}
+Robot {
+  controller "my_controller_supervisor"
+  supervisor TRUE
+}

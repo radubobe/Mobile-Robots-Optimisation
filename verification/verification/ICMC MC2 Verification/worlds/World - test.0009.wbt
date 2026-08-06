@@ -1,0 +1,65 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "../protos/RoadFromPoints.proto"
+
+WorldInfo {
+  FPS 15
+}
+Viewpoint {
+  orientation -0.5773502691896257 0.5773502691896257 0.5773502691896257 2.0943245915045035
+  position 1.6419450039881711 1.0176495946969535 3.601328701326762
+  follow "e-puck"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  translation 0 0 -0.02
+  size 100 100
+  tileSize 1 1
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/vehicles/worlds/textures/ground_grass.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+RoadFromPoints {
+  translation 0 0 1
+  fileName "test.0009"
+  rightBorderBoundingObject FALSE
+  leftBorderBoundingObject FALSE
+}
+DEF Wall Wall {
+  translation 1.940377 1.231616 1
+  rotation 0 0 1 2.642215
+  size 0.05 0.2 0.01
+}
+DEF E-puck E-puck {
+  hidden position_0_0 2.344953655285219
+  hidden position_0_1 2.344953653721513
+  hidden linearVelocity_0 -0.0006403996124128704 -0.01642991257430478 0.00024020581701847561
+  hidden angularVelocity_0 -0.23708784006652425 0.007195860015105548 5.517373593522102e-05
+  hidden rotation_1 0 1 0 2.344953655285219
+  hidden rotation_2 0 1 0 2.344953653721513
+  translation 1.179016521318527 1.1019325978411307 0.9999751472943728
+  rotation -0.005048497617729774 -0.004777391371885456 -0.999975844309993 1.6082459003952332
+  controller "apf_controller"
+  turretSlot [
+    GPS {
+    }
+  ]
+}
+Robot {
+  controller "nsga_controller"
+  supervisor TRUE
+}

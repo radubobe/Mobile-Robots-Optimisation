@@ -1,0 +1,65 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "../protos/RoadFromPoints.proto"
+
+WorldInfo {
+  FPS 15
+}
+Viewpoint {
+  orientation 0.47640787297653125 -0.7611795885566983 -0.4400467844793697 4.366801352423141
+  position 1.659128668793608 1.6186488364252447 3.4392594040166298
+  follow "e-puck"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  translation 0 0 -0.02
+  size 100 100
+  tileSize 1 1
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/vehicles/worlds/textures/ground_grass.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+RoadFromPoints {
+  translation 0 0 1
+  fileName "Experiment2"
+  rightBorderBoundingObject FALSE
+  leftBorderBoundingObject FALSE
+}
+DEF Wall Wall {
+  translation 2.09501 1.2799 1
+  rotation 0 0 1 -3.020215307179586
+  size 0.05 0.2 0.01
+}
+DEF E-puck E-puck {
+  hidden position_0_0 249.59415679900178
+  hidden position_0_1 260.9372055733889
+  hidden linearVelocity_0 -0.006929010458564992 0.018944779732480037 -8.135960566969894e-06
+  hidden angularVelocity_0 -0.01326175109358611 0.0028932979866646575 -1.6396938231551767e-05
+  hidden rotation_1 0 -1 0 1.7332554881816788
+  hidden rotation_2 0 -1 0 2.9565773281537377
+  translation 1.5487490498257963 1.6617275578980861 0.999973400523156
+  rotation 0.0017186040815897142 -0.0009686010838650975 0.9999980541040823 1.9268990772912236
+  controller "enps_controller"
+  turretSlot [
+    GPS {
+    }
+  ]
+}
+Robot {
+  controller "enps_controller"
+  supervisor TRUE
+}
